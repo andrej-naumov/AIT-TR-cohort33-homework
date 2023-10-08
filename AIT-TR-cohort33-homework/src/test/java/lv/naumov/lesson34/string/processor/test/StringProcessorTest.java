@@ -18,8 +18,8 @@ public class StringProcessorTest {
 
     @Test
     public void testConcatenate() {
-        String result = stringProcessor.concatenate("Hello, ", "world!");
-        assertEquals("Hello, world!", result);
+        String result = stringProcessor.concatenate("Привет, ", "мир!");
+        assertEquals("Привет, мир!", result);
     }
 
     @Test
