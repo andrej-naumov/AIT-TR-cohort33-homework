@@ -7,7 +7,7 @@ public class StringProcessorPlus extends StringProcessor {
 	@Override
 	public boolean isPalindrome(String str) {
 		// Удаление пробелов и преобразование в нижний (нижний регистр лучше, так как не
-		// все маенькие буйвы имеют заглавные) регистр
+		// все маленькие буквы имеют заглавные) регистр
 		String cleanedStr = str.replaceAll("\\s+", "").toLowerCase();
 
 		int left = 0;
