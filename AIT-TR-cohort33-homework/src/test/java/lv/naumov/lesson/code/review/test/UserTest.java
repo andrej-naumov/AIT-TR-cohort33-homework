@@ -1,4 +1,4 @@
-package lv.naumov.lesson.code;
+package lv.naumov.lesson.code.review.test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
