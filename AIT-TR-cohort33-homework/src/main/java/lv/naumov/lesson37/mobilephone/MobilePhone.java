@@ -4,7 +4,6 @@ import java.util.UUID;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.Setter;
 import lombok.ToString;
 
 /**
@@ -19,18 +18,13 @@ import lombok.ToString;
 public class MobilePhone {
 
 	@Getter
-	@Setter
 	private UUID id;
 	@Getter
-	@Setter
 	private String brand;
 	@Getter
-	@Setter
 	private String model;
 	@Getter
-	@Setter
 	private String operatingSystem;
 	@Getter
-	@Setter
 	private double price;
 }
