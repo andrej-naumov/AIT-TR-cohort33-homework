@@ -16,24 +16,24 @@ import lv.naumov.lesson37.mobilephone.MobilePhone;
 
 public class InventoryManagementTest {
 	private InventoryManagement inventory;
+	private UUID id;
+	private MobilePhone phone;
 
 	@BeforeEach
 	void setUp() {
 		inventory = new InventoryManagement();
+		id = UUID.randomUUID();
+		phone = new MobilePhone(id, "Samsung", "Galaxy S20", "Android", 799.99);
 	}
 
 	@Test
 	void testAddMobilePhone() {
-		UUID id = UUID.randomUUID();
-		MobilePhone phone = new MobilePhone(id, "Samsung", "Galaxy S20", "Android", 799.99);
 		inventory.addMobilePhone(phone);
 		assertEquals(1, inventory.listMobilePhones().size());
 	}
 
 	@Test
 	void testGetMobilePhoneNotNull() {
-		UUID id = UUID.randomUUID();
-		MobilePhone phone = new MobilePhone(id, "Samsung", "Galaxy S20", "Android", 799.99);
 		inventory.addMobilePhone(phone);
 		MobilePhone retrievedPhone = inventory.getMobilePhone(id);
 		assertNotNull(retrievedPhone);
@@ -42,17 +42,13 @@ public class InventoryManagementTest {
 
 	@Test
 	void testGetMobilePhoneNull() {
-		UUID id = UUID.randomUUID();
-		MobilePhone phone = new MobilePhone(id, "Samsung", "Galaxy S20", "Android", 799.99);
 		inventory.addMobilePhone(phone);
 		MobilePhone retrievedPhone = inventory.getMobilePhone(UUID.randomUUID());
 		assertNull(retrievedPhone);
 	}
 
 	@Test
-	void testUpdateMobilePhone() {
-		UUID id = UUID.randomUUID();
-		MobilePhone phone = new MobilePhone(id, "Samsung", "Galaxy S20", "Android", 799.99);
+	void testUpdateMobilePhone() {		
 		inventory.addMobilePhone(phone);
 
 		MobilePhone updatedPhone = new MobilePhone(id, "Apple", "iPhone 12", "iOS", 899.99);
@@ -65,8 +61,6 @@ public class InventoryManagementTest {
 
 	@Test
 	void testDeleteMobilePhone() {
-		UUID id = UUID.randomUUID();
-		MobilePhone phone = new MobilePhone(id, "Samsung", "Galaxy S20", "Android", 799.99);
 		inventory.addMobilePhone(phone);
 		assertTrue(inventory.deleteMobilePhone(id));
 		assertEquals(0, inventory.listMobilePhones().size());
@@ -77,10 +71,11 @@ public class InventoryManagementTest {
 		MobilePhone phone1 = new MobilePhone(UUID.randomUUID(), "Samsung", "Galaxy S20", "Android", 799.99);
 		MobilePhone phone2 = new MobilePhone(UUID.randomUUID(), "Apple", "iPhone 12", "iOS", 899.99);
 
+		inventory.addMobilePhone(phone);
 		inventory.addMobilePhone(phone1);
 		inventory.addMobilePhone(phone2);
 
-		assertEquals(2, inventory.listMobilePhones().size());
+		assertEquals(3, inventory.listMobilePhones().size());
 	}
 
 	@Test
