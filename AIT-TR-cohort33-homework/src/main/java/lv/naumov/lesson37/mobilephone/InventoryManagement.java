@@ -3,6 +3,7 @@ package lv.naumov.lesson37.mobilephone;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 import lombok.extern.slf4j.Slf4j;
@@ -31,7 +32,7 @@ public class InventoryManagement {
 		inventory.add(phone);
 	}
 
-	public MobilePhone getMobilePhone(int id) {
+	public MobilePhone getMobilePhone(UUID id) {
 		log.info("Поиск мобильного телефона с указанным ID " + id);
 		for (MobilePhone phone : inventory) {
 			if (phone.getId() == id) {
@@ -43,7 +44,7 @@ public class InventoryManagement {
 		return null;
 	}
 
-	public void updateMobilePhone(MobilePhone updatedPhone) {
+	public boolean updateMobilePhone(MobilePhone updatedPhone) {
 		for (int i = 0; i < inventory.size(); i++) {
 			MobilePhone phone = inventory.get(i);
 			if (phone.getId() == updatedPhone.getId()) {
@@ -51,22 +52,29 @@ public class InventoryManagement {
 				inventory.set(i, updatedPhone);
 				log.info(
 						"Информация о мобильном телефоне с ID " + updatedPhone.getId() + " обновлена: " + updatedPhone);
-				return;
+				return true;
 			}
 		}
 		log.info("Мобильный телефон с ID " + updatedPhone.getId() + " не найден, информация не может быть обновлена.");
+		return false;
 	}
 
-	public void deleteMobilePhone(int id) {
-		inventory.removeIf(phone -> {
-			if (phone.getId() == id) {
-				log.info("Мобильный телефон с ID " + id + " удален из инвентаря.");
-				return true;
-			}
-			return false;
-		});
+	public boolean deleteMobilePhone(UUID id) {
+		// стрелочная функция
+		boolean removed = inventory.removeIf(phone -> {
+	        if (phone.getId().equals(id)) {
+	            return true;
+	        }
+	        return false;
+	    });
 
-		log.info("Мобильный телефон с ID " + id + " не найден в инвентаре и не может быть удален.");
+	    if (removed) {
+	    	log.info("Мобильный телефон с ID " + id + " удален из инвентаря.");
+	        return true;
+	    } else {
+	        log.info("Мобильный телефон с ID " + id + " не найден в инвентаре и не может быть удален.");
+	        return false;
+	    }
 	}
 
 	/*

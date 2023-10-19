@@ -1,5 +1,7 @@
 package lv.naumov.lesson37.mobilephone;
 
+import java.util.UUID;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,7 +20,7 @@ public class MobilePhone {
 
 	@Getter
 	@Setter
-	private int id;
+	private UUID id;
 	@Getter
 	@Setter
 	private String brand;
