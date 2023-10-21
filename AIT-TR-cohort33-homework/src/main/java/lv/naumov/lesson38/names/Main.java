@@ -1,7 +1,7 @@
 package lv.naumov.lesson38.names;
 
+import java.util.Arrays;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 import java.util.Set;
@@ -14,10 +14,10 @@ public class Main {
 		System.out.print("Введите количество имён: ");
 		int count = scanner.nextInt();
 
-		List<String> names = NamesTool.generateNames(new Locale("lv-LV"), count);
-		int listSize = names.size();
+		String[] names = NamesTool.generateNames(new Locale("lv-LV"), count);
+		int listSize = names.length;
 
-		Set<String> namesSet = new HashSet<>(names);
+		Set<String> namesSet = new HashSet<>(Arrays.asList(names));
 		int setSize = namesSet.size();
 
 		System.out.println("Количество всех имён в списке> \t\t" + listSize);
