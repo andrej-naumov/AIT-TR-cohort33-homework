@@ -15,15 +15,15 @@ public class Main {
 		int count = scanner.nextInt();
 
 		String[] names = NamesTool.generateNames(new Locale("lv-LV"), count);
-		int listSize = names.length;
+		int arraySize = names.length;
 
 		Set<String> namesSet = new HashSet<>(Arrays.asList(names));
 		int setSize = namesSet.size();
 
-		System.out.println("Количество всех имён в списке> \t\t" + listSize);
+		System.out.println("Количество всех имён в списке> \t\t" + arraySize);
 		System.out.println("Количество уникальных имён в коллекции> " + setSize);
 		System.out.println("---------------------------------------------------");
-		System.out.println("\t\t\t Итого разница> " + (listSize - setSize));
+		System.out.println("\t\t\t Итого разница> " + (arraySize - setSize));
 
 		System.out.print("Вывести повторяющиеся имена (1-да/0-нет): ");
 		if (scanner.nextInt() == 1) {
