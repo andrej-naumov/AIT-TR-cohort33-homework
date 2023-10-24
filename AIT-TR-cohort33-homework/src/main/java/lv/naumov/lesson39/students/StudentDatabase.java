@@ -3,6 +3,7 @@ package lv.naumov.lesson39.students;
 import java.util.HashSet;
 import java.util.Set;
 
+import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -36,7 +37,7 @@ public class StudentDatabase {
 		students = new HashSet<>();
 	}
 
-	public boolean addStudent(Student student) {
+	public boolean addStudent(@NonNull Student student) {		
 		if (!students.contains(student)) {
 			students.add(student);
 			log.info("Студент с id: " + student.getId() + " и именем: \"" + student.getName()
