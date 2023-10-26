@@ -3,6 +3,7 @@ package lv.naumov.lesson40.bar.drinks;
 import lombok.AllArgsConstructor;
 
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Внутри этого класса создайте HashMap,
@@ -15,13 +16,19 @@ import java.util.HashMap;
  */
 @AllArgsConstructor
 public class Bar {
-    private HashMap<String, Drink> drinkMap;
+	
+	private Map<String, Drink> drinks;
+	
+    public Bar() {
+		super();
+		this.drinks = new HashMap<>();
+	}
 
     public void addDrink(String key, Drink drink) {
-        drinkMap.put(key,drink);
+        this.drinks.put(key,drink);
     }
     public Drink getDrink(String id) {
-        return drinkMap.get(id);
+        return drinks.get(id);
     }
 
 }
