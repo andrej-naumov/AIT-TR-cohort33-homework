@@ -41,6 +41,9 @@ public class Main {
         // Выведите на экран размер capitalMap.
         // выведите все пары страна-столица из capitalMap
         printCountries(map2String(countriesMap.getCountries()));
+        // Замените столицу США с Вашингтон на Сан-Франциско и выведите capitalMap снова.
+        countriesMap.replaceCapital("США", "Сан-Франциско");
+        printCountries(map2String(countriesMap.getCountries()));
 
         // Дополнительные задания
         // Проверьте, содержит ли countriesSet страну "Испания".
