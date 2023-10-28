@@ -1,7 +1,8 @@
-package lv.naumov.lesson40.bar.test.drinks;
+package lv.naumov.lesson40.bar.drinks;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import lombok.extern.slf4j.XSlf4j;
 
 import java.util.HashMap;
 
