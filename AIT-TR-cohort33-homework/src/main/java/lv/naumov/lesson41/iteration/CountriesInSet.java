@@ -2,6 +2,7 @@ package lv.naumov.lesson41.iteration;
 
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -20,7 +21,7 @@ public class CountriesInSet {
     }
 
     public void addCountry(String country) {
-        if (!hasCountry(country)) {
+        if (!countries.contains(country)) {
             countries.add(country);
             log.info("Добавлена страна: {}", country);
         }
@@ -37,11 +38,7 @@ public class CountriesInSet {
         }
     }
 
-    public Set<String> getCountries() {
-        return new HashSet<>(countries);
-    }
-
-    public int getCountriesCount() {
-        return countries.size();
+    public List<String> getCountries() {
+        return new ArrayList<>(countries);
     }
 }
