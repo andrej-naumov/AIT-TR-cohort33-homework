@@ -25,7 +25,7 @@ public class BankAccount {
     Логируйте операцию на уровне INFO, указывая владельца аккаунта и сумму пополнения.*/
     public void deposit(double amount) {
         balance += amount;
-        log.info("Пополнение счёта на сумму {} для владельца аккаунта: {}", amount, owner);
+        log.info("Пополнение счёта на сумму {} для владельца аккаунта: {}", amount, maskOwnerName(owner));
     }
 
     /*
