@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2023-11-03T22:33:28.122818900Z</date>
+  <millis>1699050808122</millis>
+  <nanos>818900</nanos>
+  <sequence>1</sequence>
+  <logger>MyLogger</logger>
+  <level>INFO</level>
+  <class>lv.naumov.lesson44.book.library.LibraryCatalog</class>
+  <method>addBook</method>
+  <thread>1</thread>
+  <message>Добавлена книга: Три мушкетёра</message>
+</record>
+</log>
