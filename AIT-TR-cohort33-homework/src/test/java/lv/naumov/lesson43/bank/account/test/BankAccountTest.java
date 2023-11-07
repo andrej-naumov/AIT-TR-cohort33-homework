@@ -1,6 +1,7 @@
 package lv.naumov.lesson43.bank.account.test;
 
 import lv.naumov.lesson43.bank.account.BankAccount;
+import nl.altindag.log.LogCaptor;
 import org.junit.jupiter.api.BeforeEach;
 
 import org.junit.jupiter.api.Test;
@@ -9,6 +10,9 @@ class BankAccountTest {
     private BankAccount account1;
     private BankAccount account2;
     private BankAccount account3;
+
+    private final LogCaptor logCaptor  = LogCaptor.forClass(BankAccount.class);
+
     @BeforeEach
     public void setup() {
         account1 = new BankAccount("Иванов", 1000.0);
@@ -20,6 +24,16 @@ class BankAccountTest {
     public void testDeposit() {
         account1.deposit(500.0);
         assertEquals(1500.0, account1.checkBalance(), 0.01); // Проверка, что баланс увеличился на 500.0
+    }
+
+    @Test
+    void testDepositAmountPositivSuccess() {
+        logCaptor.setLogLevelToInfo();
+        account1.deposit(100);
+        assertEquals(1100, account1.checkBalance());
+
+        String expectedInfoMessage = "Пополнение счёта на сумму 100.0 для владельца аккаунта: И****в";
+        assertTrue(logCaptor.getInfoLogs().contains(expectedInfoMessage));
     }
 
     @Test
