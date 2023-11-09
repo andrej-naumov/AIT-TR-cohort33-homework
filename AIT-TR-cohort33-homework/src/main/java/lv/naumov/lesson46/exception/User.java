@@ -16,6 +16,6 @@ private  final   String pwd;
         id++;
         this.name = name;
         this.pwd = pwd;
-        log.info("Новый пользователь создан - Имя: " + name  + " id: " + id);
+        //log.info("Новый пользователь создан - Имя: " + name  + " id: " + id);
     }
 }
