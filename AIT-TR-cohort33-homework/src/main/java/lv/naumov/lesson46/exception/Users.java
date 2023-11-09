@@ -13,4 +13,14 @@ public class Users {
       users.add(user);
       log.info("Пользователь добавлен в систему");
     }
+
+    public boolean isUserExists(String username) {
+        for (User user : users) {
+            if (user.getName().equals(username)) {
+                log.info("Пользователь с именем {} уже существует в системе", username);
+                return true;
+            }
+        }
+        return false;
+    }
 }
