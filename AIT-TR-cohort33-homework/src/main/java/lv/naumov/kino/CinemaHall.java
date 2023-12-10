@@ -33,17 +33,18 @@ public class CinemaHall {
         this.moviesSchedule = new ArrayList<>();
     }
 
-    public void addMovie(Movie movie) {
+    public void addMovie(Movie movie) throws ScheduleConflictException{
         try {
-            isScheduleConflict(movie);
+            checkScheduleConflict(movie);
             moviesSchedule.add(movie);
             log.info("Фильм \"" + movie.getTitle() + "\" добавлен в расписание зала " + hallNumber);
         } catch (IllegalArgumentException | ScheduleConflictException e) {
             log.error(e.getMessage());
+            throw new ScheduleConflictException(e.getMessage());
         }
     }
 
-    private void isScheduleConflict(Movie newMovie) {
+    private void checkScheduleConflict(Movie newMovie) throws ScheduleConflictException {
         for (Movie scheduledMovie : moviesSchedule) {
             if (scheduledMovie.isTimeOverlapping(newMovie)) {
                 throw new ScheduleConflictException("Конфликт времени! Фильм \"" + newMovie.getTitle() + "\" не может быть добавлен.");

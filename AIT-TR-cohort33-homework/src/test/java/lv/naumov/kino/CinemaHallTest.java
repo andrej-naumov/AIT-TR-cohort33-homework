@@ -31,10 +31,23 @@ public class CinemaHallTest {
         int bookTickets = 10;
         CinemaHall cinemaHall = new CinemaHall(2, seatsInHall);
         Movie movie = new Movie(movieTitle, LocalDateTime.now(), LocalDateTime.now().plusHours(1), soldTickets);
+
         cinemaHall.addMovie(movie);
         cinemaHall.bookTicket(movie, bookTickets);
+
         Assertions.assertEquals(movie.getSoldTickets(), soldTickets + bookTickets);
         Assertions.assertEquals(cinemaHall.getAvailableSeats(movie), seatsInHall - soldTickets - bookTickets );
     }
 
+    @Test
+    public void testScheduleConflictExceptionTimeOverlap() {
+        CinemaHall cinemaHall = new CinemaHall(1, 100);
+        Movie movie1 = new Movie("Movie 1", LocalDateTime.now(), LocalDateTime.now().plusHours(2), 100);
+        Movie movie2 = new Movie("Movie 2", LocalDateTime.now().plusHours(1), LocalDateTime.now().plusHours(3), 100);
+
+        cinemaHall.addMovie(movie1);
+
+        // Проверяем, что при добавлении второго фильма, который пересекается по времени с первым, будет выброшено исключение
+        Assertions.assertThrows(ScheduleConflictException.class, () -> cinemaHall.addMovie(movie2));
+    }
 }
