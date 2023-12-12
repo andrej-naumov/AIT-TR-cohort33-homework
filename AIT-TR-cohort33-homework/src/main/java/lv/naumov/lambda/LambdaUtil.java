@@ -41,6 +41,9 @@ public class LambdaUtil {
         System.out.println("\r\n-------- Example 10");
         findFirstElementGreaterThan(integers);
 
+        System.out.println("\r\n-------- Example 11");
+        testFinal(10);
+
         System.out.println("--------");
     }
 
@@ -96,5 +99,14 @@ public class LambdaUtil {
     private static void findFirstElementGreaterThan(List<Integer> integers) {
         System.out.println(integers.stream().distinct().sorted(Integer::compare).filter(number -> number > 50).findFirst().orElse(0));
     }
+
+
+    private static void testFinal(final int number) {
+        Runnable runnable = () -> System.out.println("######### " + number);
+        runnable.run();
+        // number++;
+
+    }
+
 }
 
