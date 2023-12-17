@@ -30,8 +30,8 @@ public class Main {
     );
 
     public static void main(String[] args) throws InterruptedException {
-        log.info("--- sleep 30sec");
-        Thread.sleep(30000);
+        log.info("--- sleep 10sec");
+        Thread.sleep(10000);
 
         log.info("Go!");
         long startTimeStream = System.nanoTime(); // Засекаем время до выполнения метода
@@ -50,11 +50,11 @@ public class Main {
         long streamExecutionTime = endTimeStream - startTimeStream;
         long forExecutionTime = endTimeFor - startTimeFor;
 
-        log.info("Execution time nanoseconds with Stream method:   {}",String.format("%10.4f", (double) streamExecutionTime));
-        log.info("Execution time nanoseconds with For loop method: {}",String.format("%10.4f", (double) forExecutionTime));
+        printResult("Stream - ", endTimeStream - startTimeStream);
+        printResult("For loop - ", endTimeFor - startTimeFor);
 
-        log.info("--- sleep 30sec");
-        Thread.sleep(30000);
+        log.info("--- sleep 10sec");
+        Thread.sleep(10000);
 
         log.info("Go! Go!");
         startTimeStream = System.nanoTime();
@@ -71,18 +71,15 @@ public class Main {
         log.info("with stream:   " + averageRatesForEachListWithStream);
         log.info("with for loop: " + averageRatesForEachListWithFor);
 
-        streamExecutionTime = endTimeStream - startTimeStream;
-        forExecutionTime = endTimeFor - startTimeFor;
-
-        log.info("Execution time nanoseconds with Stream method:   {}",String.format("%10.4f", (double) streamExecutionTime));
-        log.info("Execution time nanoseconds with For loop method: {}",String.format("%10.4f", (double) forExecutionTime));
+        printResult("Stream - ", endTimeStream - startTimeStream);
+        printResult("For loop - ", endTimeFor - startTimeFor);
 
     }
 
 
     private static List<Double>  averageRatesForEachListWithStream(){
       return SUPER_LIST.stream()
-              .mapToDouble(list -> list.stream()
+              .mapToDouble(list -> list.parallelStream()
                       .mapToDouble(FakeEmployee::getHourRate)
                       .average()
                       .orElse(0.0)) // Если список пуст, средняя ставка будет 0.0
@@ -127,6 +124,13 @@ public class Main {
 
         return fakeEmployees;
     }
+
+    private static void printResult(String with, double executionTime){
+        String format = "%-5.1f%n";
+
+        System.out.println("Execution time nanoseconds " + with + String.format("%-5.1f%n", executionTime));
+    }
+
 }
 
 
