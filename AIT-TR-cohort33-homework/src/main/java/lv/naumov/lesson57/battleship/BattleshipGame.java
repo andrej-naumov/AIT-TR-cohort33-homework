@@ -6,7 +6,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 // TODO: добавить функцию -> если корабль подбит, то вокруг него поля автоматически становятся '*'
-
+// TODO: ход противника ? -> случайные числа или chat GPT ?
 @Slf4j
 public class BattleshipGame {
     private final char[][] board;
@@ -125,7 +125,7 @@ public class BattleshipGame {
             for (int j = 0; j < opponentBoard.size; j++) {
                 char cell = opponentBoard.getCell(i, j); // Получение значения ячейки доски противника
                 if (cell == 'O') {
-                    // cell = '~'; // Маскировка кораблей противника ###
+                    cell = '~'; // Маскировка кораблей противника ###
                 }
                 System.out.print(cell + " ");
             }
