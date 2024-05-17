@@ -1,7 +1,7 @@
 package java.basic.naumov.lesson44.book.library.test;
 
-import java.basic.naumov.lesson44.book.library.Book;
-import java.basic.naumov.lesson44.book.library.LibraryCatalog;
+import basic.naumov.lesson44.book.library.Book;
+import basic.naumov.lesson44.book.library.LibraryCatalog;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

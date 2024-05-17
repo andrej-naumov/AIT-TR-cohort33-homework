@@ -11,8 +11,8 @@ import java.util.UUID;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.basic.naumov.lesson37.mobilephone.InventoryManagement;
-import java.basic.naumov.lesson37.mobilephone.MobilePhone;
+import basic.naumov.lesson37.mobilephone.InventoryManagement;
+import basic.naumov.lesson37.mobilephone.MobilePhone;
 
 public class InventoryManagementTest {
 	private InventoryManagement inventory;

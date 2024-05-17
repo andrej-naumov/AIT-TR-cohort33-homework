@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.basic.naumov.lesson34.string.processor.StringProcessorPlus;
+import basic.naumov.lesson34.string.processor.StringProcessorPlus;
 
 public class StringProcessorTest {
 

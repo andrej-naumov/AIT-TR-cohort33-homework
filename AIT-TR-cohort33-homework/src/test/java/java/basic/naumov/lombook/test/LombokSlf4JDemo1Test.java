@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.fail;
 import org.junit.jupiter.api.Test;
 
 import lombok.extern.slf4j.Slf4j;
-import java.basic.naumov.lombook.LombokSlf4jDemo1;
+import basic.naumov.lombook.LombokSlf4jDemo1;
 
 @Slf4j
 public class LombokSlf4JDemo1Test {

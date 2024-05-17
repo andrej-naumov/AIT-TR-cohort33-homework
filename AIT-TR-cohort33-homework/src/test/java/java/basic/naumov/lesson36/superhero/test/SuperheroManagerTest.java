@@ -15,8 +15,8 @@ import org.junit.runner.RunWith;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
-import java.basic.naumov.lesson36.superhero.Superhero;
-import java.basic.naumov.lesson36.superhero.SuperheroManager;
+import basic.naumov.lesson36.superhero.Superhero;
+import basic.naumov.lesson36.superhero.SuperheroManager;
 
 @RunWith(PowerMockRunner.class)
 @PrepareForTest(SuperheroManager.class) 

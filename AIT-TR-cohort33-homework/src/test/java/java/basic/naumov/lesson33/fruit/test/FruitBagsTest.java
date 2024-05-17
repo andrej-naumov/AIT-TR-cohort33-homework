@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.basic.naumov.lesson33.fruit.FruitBags;
+import basic.naumov.lesson33.fruit.FruitBags;
 
 public class FruitBagsTest {
 

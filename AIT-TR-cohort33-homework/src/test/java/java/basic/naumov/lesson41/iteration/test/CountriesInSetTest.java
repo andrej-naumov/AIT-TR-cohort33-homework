@@ -1,6 +1,6 @@
 package java.basic.naumov.lesson41.iteration.test;
 
-import java.basic.naumov.lesson41.iteration.CountriesInSet;
+import basic.naumov.lesson41.iteration.CountriesInSet;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

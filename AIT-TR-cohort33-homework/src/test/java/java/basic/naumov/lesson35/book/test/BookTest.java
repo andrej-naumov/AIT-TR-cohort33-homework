@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.basic.naumov.lesson35.book.Book;
+import basic.naumov.lesson35.book.Book;
 
 public class BookTest {
 

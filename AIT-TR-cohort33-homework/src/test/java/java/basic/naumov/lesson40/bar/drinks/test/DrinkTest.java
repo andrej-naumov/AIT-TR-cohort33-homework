@@ -1,6 +1,6 @@
 package java.basic.naumov.lesson40.bar.drinks.test;
 
-import java.basic.naumov.lesson40.bar.drinks.Drink;
+import basic.naumov.lesson40.bar.drinks.Drink;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

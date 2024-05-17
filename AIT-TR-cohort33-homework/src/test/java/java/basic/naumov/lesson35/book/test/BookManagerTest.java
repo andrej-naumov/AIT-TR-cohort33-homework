@@ -10,8 +10,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.basic.naumov.lesson35.book.Book;
-import java.basic.naumov.lesson35.book.BookManager;
+import basic.naumov.lesson35.book.Book;
+import basic.naumov.lesson35.book.BookManager;
 
 public class BookManagerTest {
 

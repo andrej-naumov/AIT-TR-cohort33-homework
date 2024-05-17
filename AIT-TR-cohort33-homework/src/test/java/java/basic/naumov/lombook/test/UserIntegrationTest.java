@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-import java.basic.naumov.lombook.User;
+import basic.naumov.lombook.User;
 
 public class UserIntegrationTest {
 

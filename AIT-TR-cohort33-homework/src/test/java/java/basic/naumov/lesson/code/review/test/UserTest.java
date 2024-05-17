@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.basic.naumov.lesson.code.review.User;
+import basic.naumov.lesson.code.review.User;
 
 public class UserTest {
     private User user;

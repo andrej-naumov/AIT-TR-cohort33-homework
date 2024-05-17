@@ -1,5 +1,9 @@
 package java.basic.naumov.kino;
 
+import basic.naumov.kino.CinemaHall;
+import basic.naumov.kino.Movie;
+import basic.naumov.kino.ScheduleConflictException;
+import basic.naumov.kino.SoldOutException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

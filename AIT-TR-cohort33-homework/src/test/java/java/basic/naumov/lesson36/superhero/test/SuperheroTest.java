@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-import java.basic.naumov.lesson36.superhero.Superhero;
+import basic.naumov.lesson36.superhero.Superhero;
 
 public class SuperheroTest {
 

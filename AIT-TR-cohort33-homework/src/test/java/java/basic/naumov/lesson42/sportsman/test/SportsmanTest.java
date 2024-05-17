@@ -1,6 +1,6 @@
 package java.basic.naumov.lesson42.sportsman.test;
 
-import java.basic.naumov.lesson42.sportsman.Sportsman;
+import basic.naumov.lesson42.sportsman.Sportsman;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 

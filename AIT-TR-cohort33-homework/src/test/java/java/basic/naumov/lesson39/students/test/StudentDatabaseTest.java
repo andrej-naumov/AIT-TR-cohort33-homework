@@ -9,8 +9,8 @@ import java.util.Set;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.basic.naumov.lesson39.students.Student;
-import java.basic.naumov.lesson39.students.StudentDatabase;
+import basic.naumov.lesson39.students.Student;
+import basic.naumov.lesson39.students.StudentDatabase;
 
 public class StudentDatabaseTest {
 	private StudentDatabase database;

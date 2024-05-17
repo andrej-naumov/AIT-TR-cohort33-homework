@@ -8,8 +8,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.basic.naumov.lesson.phonebook.Contact;
-import java.basic.naumov.lesson.phonebook.Phonebook;
+import basic.naumov.lesson.phonebook.Contact;
+import basic.naumov.lesson.phonebook.Phonebook;
 
 public class PhonebookTest {
 

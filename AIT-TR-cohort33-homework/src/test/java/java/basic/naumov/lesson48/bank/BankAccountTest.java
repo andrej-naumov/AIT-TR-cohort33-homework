@@ -1,5 +1,7 @@
 package java.basic.naumov.lesson48.bank;
 
+import naumov.lesson48.bank.BankAccount;
+import naumov.lesson48.bank.InsufficientFundsException;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

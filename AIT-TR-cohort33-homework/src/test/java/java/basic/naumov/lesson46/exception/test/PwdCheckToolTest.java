@@ -2,8 +2,8 @@ package java.basic.naumov.lesson46.exception.test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.basic.naumov.lesson46.exception.PwdCheckTool;
-import java.basic.naumov.lesson46.exception.UserRegistrationException;
+import basic.naumov.lesson46.exception.PwdCheckTool;
+import basic.naumov.lesson46.exception.UserRegistrationException;
 import org.junit.Test;
 
 

@@ -1,6 +1,6 @@
 package java.basic.naumov.lesson46.exception.test;
 
-import java.basic.naumov.lesson46.exception.Main;
+import basic.naumov.lesson46.exception.Main;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -1,5 +1,7 @@
 package java.basic.naumov.lesson48.bank;
 
+import naumov.lesson48.bank.AuthenticationException;
+import naumov.lesson48.bank.AuthenticationService;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

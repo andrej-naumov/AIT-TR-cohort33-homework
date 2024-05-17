@@ -1,6 +1,6 @@
 package java.basic.naumov.lesson43.bank.account.test;
 
-import java.basic.naumov.lesson43.bank.account.BankAccount;
+import basic.naumov.lesson43.bank.account.BankAccount;
 import nl.altindag.log.LogCaptor;
 import org.junit.jupiter.api.BeforeEach;
 

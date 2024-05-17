@@ -1,5 +1,7 @@
 package java.basic.naumov.lesson56.event;
 
+import basic.naumov.lesson56.event.Event;
+import basic.naumov.lesson56.event.EventScheduler;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import java.time.LocalDateTime;

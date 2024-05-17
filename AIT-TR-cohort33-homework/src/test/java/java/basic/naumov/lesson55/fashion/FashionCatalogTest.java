@@ -1,4 +1,8 @@
 package java.basic.naumov.lesson55.fashion;
+import basic.naumov.lesson55.fashion.FashionCatalog;
+import basic.naumov.lesson55.fashion.FashionCategory;
+import basic.naumov.lesson55.fashion.FashionItem;
+import basic.naumov.lesson55.fashion.Season;
 import org.junit.jupiter.api.Test;
 
 import java.util.EnumSet;
