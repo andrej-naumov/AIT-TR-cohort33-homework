@@ -8,7 +8,7 @@
   <sequence>1</sequence>
   <logger>MyLogger</logger>
   <level>INFO</level>
-  <class>lv.naumov.lesson44.book.library.LibraryCatalog</class>
+  <class>library.book.lesson44.java.basic.naumov.LibraryCatalog</class>
   <method>addBook</method>
   <thread>1</thread>
   <message>Добавлена книга: Три мушкетёра</message>
