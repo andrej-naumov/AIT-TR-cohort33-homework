@@ -18,12 +18,12 @@ public class FindNumbers {
         }
     }
 
-    private static boolean containsDigit(int number, int digit) {
-        while (number != 0) {
-            if (number % 10 == digit) {
+    static boolean containsDigit(int number, int digit) {
+        String numberStr = String.valueOf(number);
+        for (char c : numberStr.toCharArray()) {
+            if (c == (char) (digit + '0')) {
                 return true;
             }
-            number /= 10;
         }
         return false;
     }
