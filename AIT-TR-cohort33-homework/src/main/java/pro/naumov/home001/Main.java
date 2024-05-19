@@ -26,6 +26,8 @@ public class Main {
         int digit = 3;
 
         do {
+            // empty set
+            treeSet.clear();
             System.out.println("Текущие параметры:");
             System.out.println("Старт: " + start);
             System.out.println("Конец: " + end);
@@ -42,13 +44,13 @@ public class Main {
 
             switch (choice) {
                 case 0 -> {
-                    System.out.print("Введите старт: " + start + "/");
+                    System.out.print("Введите старт: [" + start + "]/");
                     start = scanner.nextInt();
-                    System.out.print("Введите конец: " + end + "/");
+                    System.out.print("Введите конец: [" + end + "]/");
                     end = scanner.nextInt();
-                    System.out.print("Введите делитель: " + divideWithoutRemainder + "/");
+                    System.out.print("Введите делитель: [" + divideWithoutRemainder + "/");
                     divideWithoutRemainder = readDivideWithoutRemainder(scanner);
-                    System.out.print("Введите цифру: " + digit + "/");
+                    System.out.print("Введите цифру: [" + digit + "]/");
                     digit = scanner.nextInt();
                 }
                 case 1 -> startSingleThread(start, end, divideWithoutRemainder, digit);
